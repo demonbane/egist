@@ -1,2 +1,2 @@
-require 'egist'
+require 'egist.rb'
 run Sinatra::Application
