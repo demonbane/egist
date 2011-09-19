@@ -16,6 +16,7 @@ end
 post '/decrypt' do
   abort "Invalid gist" unless params[:gistid]
   Pipefish.key=params[:password].to_s
+  STDERR.puts Pipefish.key
 
   req = Net::HTTP::Get.new("/gists/#{params[:gistid]}")
 
@@ -24,5 +25,6 @@ post '/decrypt' do
 
   content = JSON.parse(http.request(req).body)["files"].values.last["content"]
 
+  STDERR.puts content
   Pipefish.decrypt(content)
 end
