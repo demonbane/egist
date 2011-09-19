@@ -1,6 +1,6 @@
 source :rubygems
 gem 'rack'
 gem 'sinatra'
-gem 'crypt'
+gem 'crypt19'
 gem 'json'
 gem 'shotgun'
