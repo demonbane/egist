@@ -15,7 +15,7 @@ end
 
 post '/decrypt' do
   abort "Invalid gist" unless params[:gistid]
-  Pipefish.key=params[:password]
+  Pipefish.key=params[:password].to_s
 
   req = Net::HTTP::Get.new("/gists/#{params[:gistid]}")
 
