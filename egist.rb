@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 require 'net/https'
-require 'lib/pipefish'
+require './lib/pipefish'
 
 get '/' do
   "Hello, world!"
